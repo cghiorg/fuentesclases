@@ -1,0 +1,6 @@
+git init
+git add . 
+git commit -m "Agregar archivos txt"
+git branch -M main (agregamos la rama)
+git remote add origin https://github.com/cghiorg/fuentesclases.git (Repositorio Remoto - Github)
+git push origin main
