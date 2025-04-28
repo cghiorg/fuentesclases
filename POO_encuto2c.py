@@ -13,3 +13,4 @@ robot = Robot()     # Creamos un robot
 
 hacer_hablar(loro)
 hacer_hablar(robot)
+
