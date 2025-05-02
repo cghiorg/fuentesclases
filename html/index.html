@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi primera página</title>
+  <link rel="stylesheet" href="plantilla.css">
+  <script src="fuentes.js"></script>
+</head>
+<body>
+  <h1>¡Hola, mundo!</h1>
+  <p>Este es mi primer párrafo en HTML.</p>
+
+  <form onsubmit="return validarFormulario()">
+    <input type="text" id="nombre" placeholder="Tu nombre">
+    <input type="submit" value="Enviar">
+  </form>
+
+  <button onclick="alert('¡Hola!')">Haz clic aquí</button>
+
+  <p id="demo">Texto original</p>
+  <button onclick="document.getElementById('demo').innerText='¡Texto cambiado!'">Cambiar texto</button>
+
+</body>
+</html>

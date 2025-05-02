@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Politécnico Malvinas Argentinas</title>
+    <!-- Vinculamos el archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado con logo e institución -->
+    <header>
+        <img src="logo_azul.png" alt="Logo Politécnico" class="logo">
+        <h2>Centro Politécnico Superior Malvinas Argentinas</h2>
+    </header>
+
+    <!-- Contenedor del formulario -->
+    <main>
+        <h2>Formulario de Inscripción</h2>
+        <form id="formulario" onsubmit="return validarFormulario()">
+            <!-- Campo de texto -->
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+
+            <!-- Correo electrónico -->
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ej: juan@email.com" required>
+
+            <!-- Edad (número) -->
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="12" max="99" required>
+
+            <!-- Selección de género -->
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Seleccione...</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <!-- Área de texto -->
+            <label for="comentarios">Comentarios adicionales:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Contanos sobre tus intereses..."></textarea>
+
+            <!-- Checkbox -->
+            <label>
+                <input type="checkbox" id="terminos" required>
+                Acepto los términos y condiciones
+            </label>
+
+            <!-- Botón de envío -->
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <!-- Script JavaScript para validación -->
+    <script>
+        function validarFormulario() {
+            // Obtener valores del formulario
+            var nombre = document.getElementById("nombre").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var edad = document.getElementById("edad").value;
+            var genero = document.getElementById("genero").value;
+            var terminos = document.getElementById("terminos").checked;
+
+            // Validación simple en JS
+            if (nombre === "" || email === "" || edad === "" || genero === "") {
+                alert("Por favor, completá todos los campos obligatorios.");
+                return false;
+            }
+
+            if (!terminos) {
+                alert("Debes aceptar los términos y condiciones.");
+                return false;
+            }
+
+            alert("Formulario enviado correctamente.");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

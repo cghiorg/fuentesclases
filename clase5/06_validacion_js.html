@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Validación</title>
+</head>
+<body>
+    <form onsubmit="return validarFormulario()">
+        <input type="text" id="nombre" placeholder="Escribí tu nombre">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validarFormulario() {
+            // Obtener el valor del campo
+            var nombre = document.getElementById("nombre").value;
+
+            // Validar si está vacío
+            if (nombre === "") {
+                alert("El campo nombre no puede estar vacío.");
+                return false; // Evita que el formulario se envíe
+            }
+
+            return true; // Permite el envío si todo está bien
+        }
+    </script>
+</body>
+</html>
