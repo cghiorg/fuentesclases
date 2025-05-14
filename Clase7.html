@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primer botón interactivo</title>
+    <style>
+        body {
+            background-color: #fbfbfb;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            color: #f80000;
+        }
+
+        button {
+            background-color: #3fda45;
+            color: rgb(251, 0, 0);
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¡Bienvenido a mi página!</h1>
+    <button onclick="mostrarMensaje()">Haz clic aquí</button>
+
+    <script>
+        function mostrarMensaje() {
+            alert("¡Hola! Has hecho clic en el botón.");
+        }
+    </script>
+
+</body>
+</html>

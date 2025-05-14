@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Encuesta{% endblock %}
+
+{% block contenido %}
+    <h2>Encuesta rápida</h2>
+    <form method="POST">
+        <label>Tu nombre:</label>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Lenguaje favorito:</label>
+        <select name="lenguaje">
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Otro">Otro</option>
+        </select><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}

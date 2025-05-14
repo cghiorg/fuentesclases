@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Resultado{% endblock %}
+
+{% block contenido %}
+    <h2>Gracias por participar, {{ nombre }}!</h2>
+
+    {% if lenguaje == "Python" %}
+        <p>🐍 ¡También amamos Python! Es un gran lenguaje para ciencia de datos.</p>
+    {% elif lenguaje == "JavaScript" %}
+        <p>🌐 JavaScript es ideal para desarrollo web frontend.</p>
+    {% else %}
+        <p>👍 Qué bueno que explores otros lenguajes.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Listado de Productos{% endblock %}
+
+{% block contenido %}
+    <h2>Productos Disponibles</h2>
+    <ul>
+        {% for p in productos %}
+            <li>{{ p }}</li>
+        {% else %}
+            <li>No hay productos disponibles.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
