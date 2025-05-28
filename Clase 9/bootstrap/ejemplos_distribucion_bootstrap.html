@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Distribución en Pantalla con Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+
+  <h1 class="mb-4">Ejemplos de Distribución con el Sistema de Grillas</h1>
+
+  <!-- Distribución 1: 3 columnas iguales -->
+  <h3>3 columnas iguales</h3>
+  <div class="row text-white">
+    <div class="col-md-4 bg-primary p-3">Columna 1</div>
+    <div class="col-md-4 bg-success p-3">Columna 2</div>
+    <div class="col-md-4 bg-warning p-3 text-dark">Columna 3</div>
+  </div>
+
+  <hr>
+
+  <!-- Distribución 2: 2 columnas desiguales -->
+  <h3>2 columnas desiguales (8/4)</h3>
+  <div class="row text-white">
+    <div class="col-md-8 bg-danger p-3">Contenido principal</div>
+    <div class="col-md-4 bg-secondary p-3">Barra lateral</div>
+  </div>
+
+  <hr>
+
+  <!-- Distribución 3: Centrado con offset -->
+  <h3>Columna centrada (offset)</h3>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 bg-info text-white p-3 text-center">
+      Contenido centrado
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Distribución 4: Diseño en filas múltiples -->
+  <h3>Filas múltiples</h3>
+  <div class="row text-white">
+    <div class="col-md-6 bg-dark p-3">Fila 1 - Columna 1</div>
+    <div class="col-md-6 bg-dark p-3">Fila 1 - Columna 2</div>
+  </div>
+  <div class="row text-white mt-2">
+    <div class="col-md-4 bg-primary p-3">Fila 2 - Columna 1</div>
+    <div class="col-md-4 bg-success p-3">Fila 2 - Columna 2</div>
+    <div class="col-md-4 bg-warning text-dark p-3">Fila 2 - Columna 3</div>
+  </div>
+
+  <hr>
+
+  <!-- Distribución 5: Responsive completa -->
+  <h3>Distribución responsiva</h3>
+  <div class="row text-white">
+    <div class="col-12 col-sm-6 col-lg-4 bg-primary p-3">Responsiva 1</div>
+    <div class="col-12 col-sm-6 col-lg-4 bg-success p-3">Responsiva 2</div>
+    <div class="col-12 col-sm-12 col-lg-4 bg-danger p-3">Responsiva 3</div>
+  </div>
+
+</div>
+</body>
+</html>

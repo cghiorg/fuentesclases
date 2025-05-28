@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; background: #f0f2f5; }
+.contenedor { width: 90%; max-width: 600px; margin: 40px auto; background: white; padding: 20px; box-shadow: 0px 0px 15px rgba(0,0,0,0.1); }
+form input, form button { display: block; width: 100%; margin: 10px 0; padding: 10px; }
+button { background: steelblue; color: white; border: none; cursor: pointer; }
+.menu { background: #2c3e50; padding: 10px; display: flex; justify-content: center; gap: 20px; }
+.menu a { color: white; text-decoration: none; }
+.error { color: red; }

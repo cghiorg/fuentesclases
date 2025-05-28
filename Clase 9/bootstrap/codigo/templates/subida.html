@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Subir Imagen{% endblock %}
+{% block contenido %}
+<h3>Subir Imagen</h3>
+<form method="POST" enctype="multipart/form-data">
+  <input type="file" name="archivo" class="form-control mb-3">
+  <button type="submit" class="btn btn-primary">Subir</button>
+</form>
+{% if imagen %}
+<hr>
+<img src="{{ url_for('static', filename='uploads/' ~ imagen) }}" width="300">
+{% endif %}
+{% endblock %}

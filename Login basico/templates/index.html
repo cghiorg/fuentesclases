@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    {% include 'menu.html' %}
+    <div class="contenedor">
+        <h2>Bienvenido, {{ session['usuario'] }}</h2>
+        <canvas id="grafico" width="400" height="200"></canvas>
+    </div>
+    <script>
+        const ctx = document.getElementById('grafico');
+        const data = {
+            labels: [{% for p in productos %}'{{ p.nombre }}',{% endfor %}],
+            datasets: [{
+                label: 'Precios',
+                data: [{% for p in productos %}{{ p.precio }},{% endfor %}],
+                backgroundColor: 'rgba(100, 149, 237, 0.6)',
+                borderColor: 'rgba(100, 149, 237, 1)',
+                borderWidth: 1
+            }]
+        };
+        new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+    </script>
+</body>
+</html>

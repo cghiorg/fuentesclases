@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    {% include 'menu.html' %}
+    <div class="contenedor">
+        <h2>Lista de Productos</h2>
+        <ul>
+            {% for p in productos %}
+                <li>{{ p.nombre }} - ${{ p.precio }}
+                    [<a href="{{ url_for('editar', id=p.id) }}">Editar</a>]
+                    [<a href="{{ url_for('eliminar', id=p.id) }}">Eliminar</a>]
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

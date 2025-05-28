@@ -1,0 +1,5 @@
+Toma todos los componentes y versiones
+pip freeze > requirements.txt
+
+Instala todo
+pip install -r requirements.txt

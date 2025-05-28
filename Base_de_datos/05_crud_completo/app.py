@@ -62,7 +62,7 @@ template_index = """
 </form>
 <ul>
   {% for prod in productos %}
-    <li>{{ prod.nombre }} - ${{ prod.precio }}
+    <li>{{ prod.nombre }} - ${{ prod.
     [<a href="{{ url_for('editar', id=prod.id) }}">Editar</a>]
     [<a href="{{ url_for('eliminar', id=prod.id) }}">Eliminar</a>]
     </li>

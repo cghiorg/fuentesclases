@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Producto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    {% include 'menu.html' %}
+    <div class="contenedor">
+        <h2>{{ producto and "Editar" or "Nuevo" }} Producto</h2>
+        <form method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" value="{{ producto.nombre if producto else '' }}" required>
+            <input type="number" name="precio" step="0.01" placeholder="Precio" value="{{ producto.precio if producto else '' }}" required>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+</html>
